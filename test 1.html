@@ -2,6 +2,18 @@
 <html lang="en">
 <head>
     <style>
+        .descText{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: absolute;
+            text-align: left;
+            max-inline-size: 40%;
+            top: 20%;
+            left: 20%;
+        }
+        .imgAnim{
+            position: relative;
+            z-index:10;
+        }
         .imgAnim:hover{
             transition: all 1s ease;
             transform: scale(105%);
@@ -16,7 +28,7 @@
         }
         .imgAnim:active ~ .descText{
             transition: all 1s ease;
-            transform: translate(120%);
+            transform: translate(250px);
         }
         .imgAnim:not(:active) ~ .descText{
             transition: all 1s ease;
@@ -36,14 +48,7 @@
         .imgDiv{
             text-align: center;
             position: relative;
-        }
-        #descText{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            position: absolute;
-            text-align: left;
-            max-inline-size: 40%;
-            top: 20%;
-            left: 20%;
+            padding-bottom: 30px;
         }
     </style>
     <meta charset="UTF-8">
@@ -56,10 +61,19 @@
         <h1>Random shoe 1</h1>
         <div class="imgDiv">
             <img class="imgAnim" src="shoe1.jpg" alt="Nike shoe" width="432" height="432">
-            <div id="descText" class="descText">
+            <div class="descText">
                 <h2>Air Zoom<br> Pegasus 38</h2>
                 Men's Road Running Shoes<br>
                 <p><b>€129.99</b></p>
+                <button>Add to cart</button>
+            </div>
+        </div>
+        <div class="imgDiv">
+            <img class="imgAnim" src="shoe2.jpg" alt="Nike shoe" width="432" height="432">
+            <div class="descText">
+                <h2>Air Max<br> Genome</h2>
+                Men's Shoes<br>
+                <p><b>€169.99</b></p>
                 <button>Add to cart</button>
             </div>
         </div>
