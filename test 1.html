@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .imgAnim:hover{
+            transition: all 1s ease;
+            transform: scale(105%);
+        }
+        .imgAnim:not(:hover){
+            transition: all 1s ease;
+            transform: scale(100%);
+        }
+        .imgAnim:active{
+            transition: all 1s ease;
+            transform: translateX(-100px) scale(70%); 
+        }
+        .imgAnim:active ~ .descText{
+            transition: all 1s ease;
+            transform: translate(120%);
+        }
+        .imgAnim:not(:active) ~ .descText{
+            transition: all 1s ease;
+            transform: translate(20%);
+        }
+        .mainDiv{
+            color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(255, 192, 55);
+            padding: 20px;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
+        .imgDiv{
+            text-align: center;
+            position: relative;
+        }
+        #descText{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            position: absolute;
+            text-align: left;
+            max-inline-size: 40%;
+            top: 20%;
+            left: 20%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test website 1</title>
+</head>
+<body style="background-color: rgb(92, 13, 13);">
+    <div class="mainDiv">    
+        <h1>Random shoe 1</h1>
+        <div class="imgDiv">
+            <img class="imgAnim" src="shoe1.jpg" alt="Nike shoe" width="432" height="432">
+            <div id="descText" class="descText">
+                <h2>Air Zoom<br> Pegasus 38</h2>
+                Men's Road Running Shoes<br>
+                <p><b>€129.99</b></p>
+                <button>Add to cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
